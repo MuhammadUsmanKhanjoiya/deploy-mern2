@@ -10,6 +10,12 @@ const port = process.env.PORT || 8081;
 
 app.use(bodyParser.json());
 app.use(cors());
+const app = express();
+app.use(cors({
+  origin: 'https://deploy-mern2-ui.vercel.app', // Allow your frontend domain
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
 app.use(express.json()); // Ensure this middleware is applied
 
 // Ping Route for testing
