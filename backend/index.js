@@ -11,10 +11,8 @@ const port = process.env.PORT || 8081;
 app.use(bodyParser.json());
 app.use(cors());
 const app = express();
-app.use(cors({
-  origin: '*', 
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type']
+app.use(cors({ 
+origin :"*"
 }));
 app.use(express.json()); // Ensure this middleware is applied
 
