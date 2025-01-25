@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 const app = express();
 app.use(cors({
-  origin: 'https://deploy-mern2-ui.vercel.app', // Allow your frontend domain
+  origin: '*', 
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
